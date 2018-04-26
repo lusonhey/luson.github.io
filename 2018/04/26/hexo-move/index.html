@@ -162,7 +162,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="hexo-转移新电脑部署"><a href="#hexo-转移新电脑部署" class="headerlink" title="hexo 转移新电脑部署"></a>hexo 转移新电脑部署</h1><p>转载自：<a href="https://www.zhihu.com/question/21193762/answer/103097754" target="_blank" rel="noopener">skycrown的回答</a><br>来源：知乎</p>
+      		<h1 id="hexo-转移新电脑部署"><a href="#hexo-转移新电脑部署" class="headerlink" title="hexo 转移新电脑部署"></a>hexo 转移新电脑部署</h1><p>转载：<a href="https://www.zhihu.com/question/21193762/answer/103097754" target="_blank" rel="noopener">skycrown的回答</a><br>来源：知乎</p>
 <p>1.从官网Git下载git，在新电脑上安装，因为https速度慢，而且每次都要输入口令，常用的是使用ssh。<br>使用下面方法创建：<br>（1）打开git bash，在用户主目录下运行：</p>
 <pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot; //把其中的邮件地址换成自己的邮件地址，然后一路回车
 </code></pre><p>（2）最后完成后，会在用户主目录下生成.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH key密钥对，id_rsa是私钥，千万不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>（3）登陆GitHub，打开「Settings」-&gt;「SSH and GPG keys」，然后点击「new SSH key」，填上任意Title，在Key文本框里粘贴公钥id_rsa.pub文件的内容（千万不要粘贴成私钥了！）,最后点击「Add SSH Key」，你就应该看到已经添加的Key。</p>
