@@ -162,11 +162,84 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Composer-的使用"><a href="#Composer-的使用" class="headerlink" title="Composer 的使用"></a>Composer 的使用</h1><p>实例(转载请申明出处’jitamin’)<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"jitamin/jitamin"</span>,</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"project"</span>,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"A web based project management system"</span>,</span><br><span class="line">    <span class="attr">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="attr">"config"</span>: &#123;</span><br><span class="line">        <span class="attr">"preferred-install"</span>: <span class="string">"dist"</span>,</span><br><span class="line">        <span class="attr">"optimize-autoloader"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"discard-changes"</span>: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"require"</span> : &#123;</span><br><span class="line">        <span class="attr">"php"</span> : <span class="string">"&gt;=5.6.0"</span>,</span><br><span class="line">        <span class="attr">"ext-gd"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-mbstring"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-hash"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-openssl"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-json"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-ctype"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-filter"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"ext-session"</span> : <span class="string">"*"</span>,</span><br><span class="line">        <span class="attr">"pimple/pimple"</span> : <span class="string">"3.0.2"</span>,</span><br><span class="line">        <span class="attr">"eluceo/ical"</span>: <span class="string">"0.10.1"</span>,</span><br><span class="line">        <span class="attr">"erusev/parsedown"</span> : <span class="string">"1.6.0"</span>,</span><br><span class="line">        <span class="attr">"fguillot/json-rpc"</span> : <span class="string">"1.2.1"</span>,</span><br><span class="line">        <span class="attr">"fguillot/picodb"</span> : <span class="string">"1.0.14"</span>,</span><br><span class="line">        <span class="attr">"fguillot/picofeed"</span>: <span class="string">"0.1.24"</span>,</span><br><span class="line">        <span class="attr">"fguillot/simpleLogger"</span> : <span class="string">"1.0.1"</span>,</span><br><span class="line">        <span class="attr">"fguillot/simple-validator"</span> : <span class="string">"1.0.1"</span>,</span><br><span class="line">        <span class="attr">"fguillot/simple-queue"</span> : <span class="string">"1.0.1"</span>,</span><br><span class="line">        <span class="attr">"nesbot/carbon"</span>: <span class="string">"~1.21"</span>,</span><br><span class="line">        <span class="attr">"paragonie/random_compat"</span>: <span class="string">"2.0.11"</span>,</span><br><span class="line">        <span class="attr">"christian-riesen/otp"</span> : <span class="string">"1.4.3"</span>,</span><br><span class="line">        <span class="attr">"swiftmailer/swiftmailer"</span> : <span class="string">"5.4.5"</span>,</span><br><span class="line">        <span class="attr">"symfony/console"</span> : <span class="string">"~3.1"</span>,</span><br><span class="line">        <span class="attr">"symfony/event-dispatcher"</span> : <span class="string">"~3.1"</span>,</span><br><span class="line">        <span class="attr">"gregwar/captcha"</span>: <span class="string">"1.1.1"</span>,</span><br><span class="line">        <span class="attr">"robmorgan/phinx"</span>: <span class="string">"^0.6.5"</span>,</span><br><span class="line">        <span class="attr">"vlucas/phpdotenv"</span>: <span class="string">"^2.4"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"require-dev"</span> : &#123;</span><br><span class="line">        <span class="attr">"phpdocumentor/reflection-docblock"</span>: <span class="string">"2.0.4"</span>,</span><br><span class="line">        <span class="attr">"block8/php-docblock-checker"</span>: <span class="string">"^1.0"</span>,</span><br><span class="line">        <span class="attr">"squizlabs/php_codesniffer"</span>: <span class="string">"~2.5"</span>,</span><br><span class="line">        <span class="attr">"symfony/yaml"</span>: <span class="string">"2.8.7"</span>,</span><br><span class="line">        <span class="attr">"symfony/stopwatch"</span> : <span class="string">"2.6.13"</span>,</span><br><span class="line">        <span class="attr">"phpunit/phpunit"</span> : <span class="string">"4.8.26"</span>,</span><br><span class="line">        <span class="attr">"friendsofphp/php-cs-fixer"</span>: <span class="string">"^2.0"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"autoload"</span> : &#123;</span><br><span class="line">        <span class="attr">"classmap"</span> : [<span class="string">"app/"</span>],</span><br><span class="line">        <span class="attr">"psr-4"</span> : &#123;</span><br><span class="line">            <span class="attr">"Jitamin\\"</span> : <span class="string">"app/"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"files"</span> : [</span><br><span class="line">            <span class="string">"app/helpers.php"</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">        <span class="attr">"pre-install-cmd"</span>: [</span><br><span class="line">            <span class="string">"php -r \"file_exists('.env') || copy('.env.example', '.env');\""</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"post-install-cmd"</span>: [</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"post-update-cmd"</span>: [</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"repositories"</span>: &#123;</span><br><span class="line">        <span class="attr">"packagist"</span>: &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"composer"</span>,</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"https://packagist.phpcomposer.com"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
+      		<h1 id="Composer-的使用"><a href="#Composer-的使用" class="headerlink" title="Composer 的使用"></a>Composer 的使用</h1><blockquote>
 <p><a href="http://docs.phpcomposer.com/" target="_blank" rel="noopener">composer中文社区</a></p>
 </blockquote>
-
+<p>实例(转载请申明出处’jitamin’)</p>
+<pre><code>{
+    &quot;name&quot;: &quot;jitamin/jitamin&quot;,
+    &quot;type&quot;: &quot;project&quot;,
+    &quot;description&quot;: &quot;A web based project management system&quot;,
+    &quot;license&quot;: &quot;MIT&quot;,
+    &quot;config&quot;: {
+        &quot;preferred-install&quot;: &quot;dist&quot;,
+        &quot;optimize-autoloader&quot;: true,
+        &quot;discard-changes&quot;: true
+    },
+    &quot;require&quot; : {
+        &quot;php&quot; : &quot;&gt;=5.6.0&quot;,
+        &quot;ext-gd&quot; : &quot;*&quot;,
+        &quot;ext-mbstring&quot; : &quot;*&quot;,
+        &quot;ext-hash&quot; : &quot;*&quot;,
+        &quot;ext-openssl&quot; : &quot;*&quot;,
+        &quot;ext-json&quot; : &quot;*&quot;,
+        &quot;ext-ctype&quot; : &quot;*&quot;,
+        &quot;ext-filter&quot; : &quot;*&quot;,
+        &quot;ext-session&quot; : &quot;*&quot;,
+        &quot;pimple/pimple&quot; : &quot;3.0.2&quot;,
+        &quot;eluceo/ical&quot;: &quot;0.10.1&quot;,
+        &quot;erusev/parsedown&quot; : &quot;1.6.0&quot;,
+        &quot;fguillot/json-rpc&quot; : &quot;1.2.1&quot;,
+        &quot;fguillot/picodb&quot; : &quot;1.0.14&quot;,
+        &quot;fguillot/picofeed&quot;: &quot;0.1.24&quot;,
+        &quot;fguillot/simpleLogger&quot; : &quot;1.0.1&quot;,
+        &quot;fguillot/simple-validator&quot; : &quot;1.0.1&quot;,
+        &quot;fguillot/simple-queue&quot; : &quot;1.0.1&quot;,
+        &quot;nesbot/carbon&quot;: &quot;~1.21&quot;,
+        &quot;paragonie/random_compat&quot;: &quot;2.0.11&quot;,
+        &quot;christian-riesen/otp&quot; : &quot;1.4.3&quot;,
+        &quot;swiftmailer/swiftmailer&quot; : &quot;5.4.5&quot;,
+        &quot;symfony/console&quot; : &quot;~3.1&quot;,
+        &quot;symfony/event-dispatcher&quot; : &quot;~3.1&quot;,
+        &quot;gregwar/captcha&quot;: &quot;1.1.1&quot;,
+        &quot;robmorgan/phinx&quot;: &quot;^0.6.5&quot;,
+        &quot;vlucas/phpdotenv&quot;: &quot;^2.4&quot;
+    },
+    &quot;require-dev&quot; : {
+        &quot;phpdocumentor/reflection-docblock&quot;: &quot;2.0.4&quot;,
+        &quot;block8/php-docblock-checker&quot;: &quot;^1.0&quot;,
+        &quot;squizlabs/php_codesniffer&quot;: &quot;~2.5&quot;,
+        &quot;symfony/yaml&quot;: &quot;2.8.7&quot;,
+        &quot;symfony/stopwatch&quot; : &quot;2.6.13&quot;,
+        &quot;phpunit/phpunit&quot; : &quot;4.8.26&quot;,
+        &quot;friendsofphp/php-cs-fixer&quot;: &quot;^2.0&quot;
+    },
+    &quot;autoload&quot; : {
+        &quot;classmap&quot; : [&quot;app/&quot;],
+        &quot;psr-4&quot; : {
+            &quot;Jitamin\\&quot; : &quot;app/&quot;
+        },
+        &quot;files&quot; : [
+            &quot;app/helpers.php&quot;
+        ]
+    },
+    &quot;scripts&quot;: {
+        &quot;pre-install-cmd&quot;: [
+            &quot;php -r \&quot;file_exists(&apos;.env&apos;) || copy(&apos;.env.example&apos;, &apos;.env&apos;);\&quot;&quot;
+        ],
+        &quot;post-install-cmd&quot;: [
+        ],
+        &quot;post-update-cmd&quot;: [
+        ]
+    },
+    &quot;repositories&quot;: {
+        &quot;packagist&quot;: {
+            &quot;type&quot;: &quot;composer&quot;,
+            &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;
+        }
+    }
+}
+</code></pre>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
