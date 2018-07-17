@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>HEY! LUSON</title>
+  <title>Archives: 2018/7 | HEY! LUSON</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -147,123 +147,78 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2018-05-16T13:43:52.000Z" itemprop="datePublished">
-          2018-05-16
-      </time>
-    
-</span>
-                <h1></h1>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/5.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2></h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p></p>
+                        
+
+                    </div>
+                </div>
             </div>
+            <!-- // .col-md-12 -->
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Composer-的使用"><a href="#Composer-的使用" class="headerlink" title="Composer 的使用"></a>Composer 的使用</h1><blockquote>
-<p><a href="http://docs.phpcomposer.com/" target="_blank" rel="noopener">composer中文社区</a></p>
-</blockquote>
-<p>实例(转载请申明出处’jitamin’)</p>
-<pre><code>{
-    &quot;name&quot;: &quot;jitamin/jitamin&quot;,
-    &quot;type&quot;: &quot;project&quot;,
-    &quot;description&quot;: &quot;A web based project management system&quot;,
-    &quot;license&quot;: &quot;MIT&quot;,
-    &quot;config&quot;: {
-        &quot;preferred-install&quot;: &quot;dist&quot;,
-        &quot;optimize-autoloader&quot;: true,
-        &quot;discard-changes&quot;: true
-    },
-    &quot;require&quot; : {
-        &quot;php&quot; : &quot;&gt;=5.6.0&quot;,
-        &quot;ext-gd&quot; : &quot;*&quot;,
-        &quot;ext-mbstring&quot; : &quot;*&quot;,
-        &quot;ext-hash&quot; : &quot;*&quot;,
-        &quot;ext-openssl&quot; : &quot;*&quot;,
-        &quot;ext-json&quot; : &quot;*&quot;,
-        &quot;ext-ctype&quot; : &quot;*&quot;,
-        &quot;ext-filter&quot; : &quot;*&quot;,
-        &quot;ext-session&quot; : &quot;*&quot;,
-        &quot;pimple/pimple&quot; : &quot;3.0.2&quot;,
-        &quot;eluceo/ical&quot;: &quot;0.10.1&quot;,
-        &quot;erusev/parsedown&quot; : &quot;1.6.0&quot;,
-        &quot;fguillot/json-rpc&quot; : &quot;1.2.1&quot;,
-        &quot;fguillot/picodb&quot; : &quot;1.0.14&quot;,
-        &quot;fguillot/picofeed&quot;: &quot;0.1.24&quot;,
-        &quot;fguillot/simpleLogger&quot; : &quot;1.0.1&quot;,
-        &quot;fguillot/simple-validator&quot; : &quot;1.0.1&quot;,
-        &quot;fguillot/simple-queue&quot; : &quot;1.0.1&quot;,
-        &quot;nesbot/carbon&quot;: &quot;~1.21&quot;,
-        &quot;paragonie/random_compat&quot;: &quot;2.0.11&quot;,
-        &quot;christian-riesen/otp&quot; : &quot;1.4.3&quot;,
-        &quot;swiftmailer/swiftmailer&quot; : &quot;5.4.5&quot;,
-        &quot;symfony/console&quot; : &quot;~3.1&quot;,
-        &quot;symfony/event-dispatcher&quot; : &quot;~3.1&quot;,
-        &quot;gregwar/captcha&quot;: &quot;1.1.1&quot;,
-        &quot;robmorgan/phinx&quot;: &quot;^0.6.5&quot;,
-        &quot;vlucas/phpdotenv&quot;: &quot;^2.4&quot;
-    },
-    &quot;require-dev&quot; : {
-        &quot;phpdocumentor/reflection-docblock&quot;: &quot;2.0.4&quot;,
-        &quot;block8/php-docblock-checker&quot;: &quot;^1.0&quot;,
-        &quot;squizlabs/php_codesniffer&quot;: &quot;~2.5&quot;,
-        &quot;symfony/yaml&quot;: &quot;2.8.7&quot;,
-        &quot;symfony/stopwatch&quot; : &quot;2.6.13&quot;,
-        &quot;phpunit/phpunit&quot; : &quot;4.8.26&quot;,
-        &quot;friendsofphp/php-cs-fixer&quot;: &quot;^2.0&quot;
-    },
-    &quot;autoload&quot; : {
-        &quot;classmap&quot; : [&quot;app/&quot;],
-        &quot;psr-4&quot; : {
-            &quot;Jitamin\\&quot; : &quot;app/&quot;
-        },
-        &quot;files&quot; : [
-            &quot;app/helpers.php&quot;
-        ]
-    },
-    &quot;scripts&quot;: {
-        &quot;pre-install-cmd&quot;: [
-            &quot;php -r \&quot;file_exists(&apos;.env&apos;) || copy(&apos;.env.example&apos;, &apos;.env&apos;);\&quot;&quot;
-        ],
-        &quot;post-install-cmd&quot;: [
-        ],
-        &quot;post-update-cmd&quot;: [
-        ]
-    },
-    &quot;repositories&quot;: {
-        &quot;packagist&quot;: {
-            &quot;type&quot;: &quot;composer&quot;,
-            &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;
-        }
-    }
-}
-</code></pre>
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2018/07/17/laravel-route/" style="float: left;">
-        ← 
-    </a>
-    
-    
-    <a class="pull-right" href="/2018/05/14/phpVersionChange/">
-         →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-
-
-</div>
+        <div class="herofade beige-dk"></div>
     </div>
 </section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2018/07/17/laravel-middleware/"></a></h4>
+                            
+                            <p><time datetime="2018-07-17T07:03:33.000Z"><a href="/2018/07/17/laravel-middleware/">2018-07-17</a></time></p>
+                        </div>
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2018/07/17/laravel-route/"></a></h4>
+                            
+                            <p><time datetime="2018-07-17T06:06:13.000Z"><a href="/2018/07/17/laravel-route/">2018-07-17</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p></p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 

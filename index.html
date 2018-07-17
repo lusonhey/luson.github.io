@@ -185,6 +185,78 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2018/07/17/laravel-middleware/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-17T07:03:33.000Z" itemprop="datePublished">
+          2018-07-17
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        laravel 中间件
+新建一个中间件php artisan make:middleware (name)
+注册中间件//在 Kernel.php 的 $routeMiddleware 属性中
+protected $routeMiddleware = [
+    &apos;token&apos; =&gt; CheckToken::class,
+];
+分配中间件Route::get(&apos;/&apos;, function ()
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/17/laravel-middleware/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/17/laravel-route/"></a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-17T06:06:13.000Z" itemprop="datePublished">
+          2018-07-17
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        laravel 路由
+方法
+match 可以响应多个HTTP谓词路由,any 响应所有路由
+
+Route::match([&apos;get&apos;, &apos;post&apos;], &apos;/&apos;, function () { // });
+
+使用 post,put,delete 的路由应在路由文件中包含 CSRF令牌字段,或在 VertifyCsrfToken.php 中的 $except 变量中加上参数名12
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/17/laravel-route/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2018/05/16/composer/"></a></h3>
                     <span>
                         <span class="post-meta">
@@ -466,85 +538,6 @@ isSingleton：返回 bean 是否单例
                     
                     <p class="pull-right readMore">
                         <a href="/2017/06/09/Spring-8/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/06/07/Spring-7/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-06-06T16:00:00.000Z" itemprop="datePublished">
-          2017-06-07
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Spring(七)通过工厂方法配置 Bean
-通过调用静态工厂方法创建 Bean
-
-
-调用静态工厂方法创建 Bean 是将对象创建的过程封装到静态方法中，当客户端需要请求对象时，只需要简单的调用该静态方法而不需要关心对象的创建细节；
-要声明通过静态工厂方法创建的 Bean；
-
-java代码1234567891011121314151617181920/** *静态工厂方法：直接调用某一个类的静态方法就可以返回 Bean 的实例 */pu
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/06/07/Spring-7/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/05/31/Spring-6/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-05-30T16:00:00.000Z" itemprop="datePublished">
-          2017-05-31
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Spring(六)基于 xml 配置 bean(三)
-IOC 容器中 Bean 的生命周期
-
-Sring IOC 容器对 Bean 的生命周期进行管理的过程：
-
-通过构造器或工厂方法创建 Bean 实例；
-为 Bean 的属性赋值和对其它 Bean 的引用；
-调用 Bean 的初始化方法：init；
-使用 Bean；
-当容器关闭时，调用 Bean 的销毁方法：destroy；
-
-代码示例：javabean文件
-1234567891011
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/05/31/Spring-6/">Read More...</a>
                     </p>
                     
                 </div>

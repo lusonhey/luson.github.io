@@ -153,8 +153,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-05-16T13:43:52.000Z" itemprop="datePublished">
-          2018-05-16
+      <time datetime="2018-07-17T06:06:13.000Z" itemprop="datePublished">
+          2018-07-17
       </time>
     
 </span>
@@ -162,95 +162,35 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Composer-的使用"><a href="#Composer-的使用" class="headerlink" title="Composer 的使用"></a>Composer 的使用</h1><blockquote>
-<p><a href="http://docs.phpcomposer.com/" target="_blank" rel="noopener">composer中文社区</a></p>
-</blockquote>
-<p>实例(转载请申明出处’jitamin’)</p>
-<pre><code>{
-    &quot;name&quot;: &quot;jitamin/jitamin&quot;,
-    &quot;type&quot;: &quot;project&quot;,
-    &quot;description&quot;: &quot;A web based project management system&quot;,
-    &quot;license&quot;: &quot;MIT&quot;,
-    &quot;config&quot;: {
-        &quot;preferred-install&quot;: &quot;dist&quot;,
-        &quot;optimize-autoloader&quot;: true,
-        &quot;discard-changes&quot;: true
-    },
-    &quot;require&quot; : {
-        &quot;php&quot; : &quot;&gt;=5.6.0&quot;,
-        &quot;ext-gd&quot; : &quot;*&quot;,
-        &quot;ext-mbstring&quot; : &quot;*&quot;,
-        &quot;ext-hash&quot; : &quot;*&quot;,
-        &quot;ext-openssl&quot; : &quot;*&quot;,
-        &quot;ext-json&quot; : &quot;*&quot;,
-        &quot;ext-ctype&quot; : &quot;*&quot;,
-        &quot;ext-filter&quot; : &quot;*&quot;,
-        &quot;ext-session&quot; : &quot;*&quot;,
-        &quot;pimple/pimple&quot; : &quot;3.0.2&quot;,
-        &quot;eluceo/ical&quot;: &quot;0.10.1&quot;,
-        &quot;erusev/parsedown&quot; : &quot;1.6.0&quot;,
-        &quot;fguillot/json-rpc&quot; : &quot;1.2.1&quot;,
-        &quot;fguillot/picodb&quot; : &quot;1.0.14&quot;,
-        &quot;fguillot/picofeed&quot;: &quot;0.1.24&quot;,
-        &quot;fguillot/simpleLogger&quot; : &quot;1.0.1&quot;,
-        &quot;fguillot/simple-validator&quot; : &quot;1.0.1&quot;,
-        &quot;fguillot/simple-queue&quot; : &quot;1.0.1&quot;,
-        &quot;nesbot/carbon&quot;: &quot;~1.21&quot;,
-        &quot;paragonie/random_compat&quot;: &quot;2.0.11&quot;,
-        &quot;christian-riesen/otp&quot; : &quot;1.4.3&quot;,
-        &quot;swiftmailer/swiftmailer&quot; : &quot;5.4.5&quot;,
-        &quot;symfony/console&quot; : &quot;~3.1&quot;,
-        &quot;symfony/event-dispatcher&quot; : &quot;~3.1&quot;,
-        &quot;gregwar/captcha&quot;: &quot;1.1.1&quot;,
-        &quot;robmorgan/phinx&quot;: &quot;^0.6.5&quot;,
-        &quot;vlucas/phpdotenv&quot;: &quot;^2.4&quot;
-    },
-    &quot;require-dev&quot; : {
-        &quot;phpdocumentor/reflection-docblock&quot;: &quot;2.0.4&quot;,
-        &quot;block8/php-docblock-checker&quot;: &quot;^1.0&quot;,
-        &quot;squizlabs/php_codesniffer&quot;: &quot;~2.5&quot;,
-        &quot;symfony/yaml&quot;: &quot;2.8.7&quot;,
-        &quot;symfony/stopwatch&quot; : &quot;2.6.13&quot;,
-        &quot;phpunit/phpunit&quot; : &quot;4.8.26&quot;,
-        &quot;friendsofphp/php-cs-fixer&quot;: &quot;^2.0&quot;
-    },
-    &quot;autoload&quot; : {
-        &quot;classmap&quot; : [&quot;app/&quot;],
-        &quot;psr-4&quot; : {
-            &quot;Jitamin\\&quot; : &quot;app/&quot;
-        },
-        &quot;files&quot; : [
-            &quot;app/helpers.php&quot;
-        ]
-    },
-    &quot;scripts&quot;: {
-        &quot;pre-install-cmd&quot;: [
-            &quot;php -r \&quot;file_exists(&apos;.env&apos;) || copy(&apos;.env.example&apos;, &apos;.env&apos;);\&quot;&quot;
-        ],
-        &quot;post-install-cmd&quot;: [
-        ],
-        &quot;post-update-cmd&quot;: [
-        ]
-    },
-    &quot;repositories&quot;: {
-        &quot;packagist&quot;: {
-            &quot;type&quot;: &quot;composer&quot;,
-            &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;
-        }
-    }
-}
+      		<h1 id="laravel-路由"><a href="#laravel-路由" class="headerlink" title="laravel 路由"></a>laravel 路由</h1><hr>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>match 可以响应多个HTTP谓词路由,any 响应所有路由</li>
+</ul>
+<pre><code>Route::match([&apos;get&apos;, &apos;post&apos;], &apos;/&apos;, function () { // });
+</code></pre><ul>
+<li>使用 post,put,delete 的路由应在路由文件中包含 CSRF令牌字段,或在 VertifyCsrfToken.php 中的 $except 变量中加上参数名<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">"post"</span> ...&gt;</span><br><span class="line">    @csrf</span><br><span class="line">    ...</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VerifyCsrfToken</span> <span class="keyword">extends</span> <span class="title">Middleware</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * The URIs that should be excluded from CSRF verification.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> array</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $except = [</span><br><span class="line">        <span class="string">'post'</span></span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="重定向路由"><a href="#重定向路由" class="headerlink" title="重定向路由"></a>重定向路由</h3><pre><code>Route::redirect(&apos;/here&apos;, &apos;there&apos;, 301);
+</code></pre><h3 id="视图路由"><a href="#视图路由" class="headerlink" title="视图路由"></a>视图路由</h3><pre><code>Route::view(&apos;/welcome&apos;, &apos;welcome&apos;, [&apos;name&apos; =&gt; &apos;Laravel&apos;]);
+//第一个参数URI,第二个视图名称,第三个可选传参
+</code></pre><h3 id="必须参数和可选参数"><a href="#必须参数和可选参数" class="headerlink" title="必须参数和可选参数"></a>必须参数和可选参数</h3><pre><code>Route::get(&apos;user/{id}&apos;, function () { // });
+Route::get(&apos;user/{name?}&apos;, function () { // });
+</code></pre><h3 id="路由前缀-and-路由组"><a href="#路由前缀-and-路由组" class="headerlink" title="路由前缀 and 路由组"></a>路由前缀 and 路由组</h3><pre><code>Route::prefix(&apos;admin&apos;)-&gt;group(function () {
+...
+});
 </code></pre>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2018/07/17/laravel-route/" style="float: left;">
+    <a class="pull-left" href="/2018/07/17/laravel-middleware/" style="float: left;">
         ← 
     </a>
     
     
-    <a class="pull-right" href="/2018/05/14/phpVersionChange/">
+    <a class="pull-right" href="/2018/05/16/composer/">
          →
     </a>
     
