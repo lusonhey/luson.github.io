@@ -185,11 +185,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/18/laravel-controller/"></a></h3>
+                    <h3><a href="/2017/05/03/hello-world/"></a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-07-18T06:21:36.000Z" itemprop="datePublished">
-          2018-07-18
+      <time datetime="2017-05-02T16:00:00.000Z" itemprop="datePublished">
+          2017-05-03
       </time>
     
 </span>
@@ -198,345 +198,20 @@
                 <div class="col-md-8">
                     <p>
                       
-                        laravel 控制器
-创建一个控制器php artisan make:controller [name]
-控制器使用方法Route::get(&apos;user/{id}&apos;, &apos;ControllerURI@methodName&apos;)
-单动作控制器__invoke()方法,注册路由时无需指定方法,会被自动调用
-控制器中间件//__construct()构造函数
-public function __const
+                        HEXO + Github 自己搭建一个博客(win端)
+环境准备
+1、安装Node2、安装Git3、推荐两款后面会用到的文本编辑器：Sublime &amp; Cmd Markdown（支持同步编辑）
+安装 HEXO
+要在Node和Git都安装好的前提下
+1、打开windows控制台，输入如下命令：npm install -g hexo
+2、初始化
+创建一个存放你这个博客的文件夹，如：Blog
+控制台cd到Blog里执行如下命令：  
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/18/laravel-controller/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/17/laravel-middleware/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-17T07:03:33.000Z" itemprop="datePublished">
-          2018-07-17
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        laravel 中间件
-新建一个中间件php artisan make:middleware (name)
-注册中间件//在 Kernel.php 的 $routeMiddleware 属性中
-protected $routeMiddleware = [
-    &apos;token&apos; =&gt; CheckToken::class,
-];
-分配中间件Route::get(&apos;/&apos;, function ()
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/17/laravel-middleware/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/17/laravel-route/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-17T06:06:13.000Z" itemprop="datePublished">
-          2018-07-17
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        laravel 路由
-方法
-match 可以响应多个HTTP谓词路由,any 响应所有路由
-
-Route::match([&apos;get&apos;, &apos;post&apos;], &apos;/&apos;, function () { // });
-
-使用 post,put,delete 的路由应在路由文件中包含 CSRF令牌字段,或在 VertifyCsrfToken.php 中的 $except 变量中加上参数名12
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/17/laravel-route/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/05/16/composer/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-05-16T13:43:52.000Z" itemprop="datePublished">
-          2018-05-16
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Composer 的使用
-composer中文社区
-
-实例(转载请申明出处’jitamin’)
-{
-    &quot;name&quot;: &quot;jitamin/jitamin&quot;,
-    &quot;type&quot;: &quot;project&quot;,
-    &quot;description&quot;: &quot;A web based project management system&quo
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/05/16/composer/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/05/14/phpVersionChange/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-05-14T01:52:49.000Z" itemprop="datePublished">
-          2018-05-14
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        ubuntu 下php多版本共存切换
-禁止一个php版本sudo a2dismod php7.0
-
-
-允许一个php版本　sudo a2enmod php7.2
-
-
-重启apacheservice apahce2 restart
-
-
-下载php扩展apt-get install php版本号-扩展名
-
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/05/14/phpVersionChange/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/04/27/linux-order/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-04-27T03:50:52.000Z" itemprop="datePublished">
-          2018-04-27
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        linux 常用指令dpkg
-apt-get
-grep [aux] 结合管道过滤
-ps a 
-echo &quot;string&quot; &gt;&gt; /directory
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/04/27/linux-order/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/04/26/hexo-move/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-04-26T13:58:09.000Z" itemprop="datePublished">
-          2018-04-26
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        hexo 转移新电脑部署转载：skycrown的回答来源：知乎
-1.从官网Git下载git，在新电脑上安装，因为https速度慢，而且每次都要输入口令，常用的是使用ssh。使用下面方法创建：（1）打开git bash，在用户主目录下运行：
-ssh-keygen -t rsa -C &quot;youremail@example.com&quot; //把其中的邮件地址换成自己的邮件地址，然后一路回车
-（2）最后完成后，会在用户主目录下生
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/04/26/hexo-move/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/11/01/spring-10/">'spring-10';</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-11-01T05:37:49.000Z" itemprop="datePublished">
-          2017-11-01
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/11/01/spring-10/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/07/10/Ubuntu-1/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-07-09T16:00:00.000Z" itemprop="datePublished">
-          2017-07-10
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Ubuntu 新手常遇问题强烈建议在有网的环境下安装 Ubuntu ，这样会避免很多不必要的麻烦
-
-无法安装，卡在 logo 界面或黑屏，进不去桌面
-
-
-
-原因：没有安装 Nvidia 显卡驱动
-解决办法：在启动界面按 e,在出现的界面中找到 quiet,在其后面空格后加上： 
-i915.modeset=0 nouveau.modeset=0 nomodeset
-进入桌面安装系统重启后，必须再输入一遍上述代码才能进去
-进入桌面后，在 软
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/07/10/Ubuntu-1/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/06/09/Spring-9/"></a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-06-09T05:37:50.000Z" itemprop="datePublished">
-          2017-06-09
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Spring(九)基于注解的方式配置 Bean
-在 classpath 中扫描组件
-
-
-组件扫描(component scanning):Spring 能够从 classpath 下自动扫描，侦测和实例化具有特定注解的组件；
-特定组件包括：
-@Component：基本注解，标识了一个受 Spring 管理的组件；
-@Respsitory：标识持久层组件；
-@Service：标识服务层（业务层）组件；
-@Controller：标识表现层组
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/06/09/Spring-9/">Read More...</a>
+                        <a href="/2017/05/03/hello-world/">Read More...</a>
                     </p>
                     
                 </div>
@@ -546,8 +221,8 @@ i915.modeset=0 nouveau.modeset=0 nomodeset
         </div>
         
         <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/page/2/">← Newer Posts</a>
           
-          <a class="pull-right" href="/page/2/">Older Posts →</a>
         </nav>
     </div>
 </section>
