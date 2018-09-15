@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>linux_kernel | HEY! LUSON</title>
+  <title>HEY! LUSON</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,11 +158,93 @@
       </time>
     
 </span>
-                <h1>linux_kernel</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<h1 id="挽救-ubuntu误删内核后…"><a href="#挽救-ubuntu误删内核后…" class="headerlink" title="(挽救)ubuntu误删内核后…"></a>(挽救)ubuntu误删内核后…</h1><hr>
+<ol>
+<li><p>首先,制作一个当前版本的U盘系统盘</p>
+</li>
+<li><p>以试用即liveCD模式进入系统</p>
+</li>
+</ol>
+<pre><code>如果卡在logo界面进不去大多是显卡驱动nouveau与内核不兼容问题,可以在grub界面按e,在quiet后加上
+    i915.modeset=0 nouveau.modeset=0 nomodeset    来禁用nouveau
+
+如果还是进不去就在quiet那行最后面加上 
+    rootdelay=90 
+</code></pre><ol start="3">
+<li>打开shell,进行以下挂载操作</li>
+</ol>
+<pre><code>a.查询你的根目录/所在的分区
+    sudo fdisk -l
+
+b.假设/在分区/dev/sda6,按顺序使用以下命令    
+    sudo mount /dev/sda6 /mnt
+    sudo mount --bind /dev /mnt/dev
+    sudo mount --bind /proc /mnt/proc
+    sudo mount --bind /sys /mnt/sys
+复制配置文件
+    sudo cp /etc/resolv.conf /mnt/etc/    
+root进入刚刚挂载的目录
+    sudo chroot /mnt    
+
+c.最关键重新安装内核部分
+    apt-get install linux-image-generic
+
+d.最后,取消挂载
+    exit
+    sudo umount /mnt/sys
+    sudo umount /mnt/proc
+    sudo umount /mnt/dev
+    sudo umount /mnt
+    reboot 
+</code></pre><blockquote>
+<p>捉急一：grub已损坏需修复</p>
+</blockquote>
+<pre><code>开始修复grub,在b步骤后：
+    grub-install /dev/sda
+    update-grub
+
+一直报错&quot;cannot find EFI directory&quot;,解决：
+    mount /dev/sda1 /boot/efi   #步骤a中找到自己的EFI分区
+    grub-install /boot/efi
+    update-grub
+    exit 
+    reboot
+搞定 
+</code></pre><blockquote>
+<p>捉急二：nvidia驱动的那些事</p>
+</blockquote>
+<pre><code>a.在开机禁用nouveau进入系统后,修改文件：/etc/modprobe.d/blacklist.conf 中加入
+    blacklist nouveau
+    options nouveau modeset=0
+
+b.更新initramfs 
+    sudo update-initramfs -u
+
+c.开关机出现命令行画面,修改文件：/etc/default/grub
+    注释掉 grub_cmdline_linux_default=quiet  
+    改　grub_cmdline_linux=&quot;text&quot;
+    去掉注释 grub_terminal=console
+
+d.sudo update-grub ,然后重启
+
+e.更新nvidia驱动
+    sudo add-apt-repository ppa:graphics-drivers/ppa  //添加官方ppa源
+    sudo apt-get update
+    sudo apt-get upgrade
+</code></pre><blockquote>
+<p>捉急三：<a href="https://www.cnblogs.com/itcui/p/5632311.html" target="_blank" rel="noopener">linux目录详解</a></p>
+</blockquote>
+<blockquote>
+<p>捉急四：删除旧内核</p>
+</blockquote>
+<pre><code>uname -r  //查看目前在用的内核版本
+dpkg --get-selections | grep linux  //查看系统所有内核版本
+sudo apt-get remove ...(要删的相应的版本)
+</code></pre>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>

@@ -185,7 +185,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/09/15/linux-kernel/">linux_kernel</a></h3>
+                    <h3><a href="/2018/09/15/linux-kernel/"></a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-09-14T16:21:11.000Z" itemprop="datePublished">
@@ -198,7 +198,20 @@
                 <div class="col-md-8">
                     <p>
                       
-                        
+                        (挽救)ubuntu误删内核后…
+
+首先,制作一个当前版本的U盘系统盘
+
+以试用即liveCD模式进入系统
+
+
+如果卡在logo界面进不去大多是显卡驱动nouveau与内核不兼容问题,可以在grub界面按e,在quiet后加上
+    i915.modeset=0 nouveau.modeset=0 nomodeset    来禁用nouveau
+
+如果还是进不去就在quiet那行最后面加上 
+    rootdelay=90 
+
+打开
                       
                     </p>
                     
